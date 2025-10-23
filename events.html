@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Eta Tau Club — Events</title>
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="icon" href="assets/img/logo.png" />
+</head>
+<body>
+	<header class="about-header">
+		<div class="container">
+			<div class="about-nav">
+				<h1 class="about-title">Events</h1>
+				<button class="hamburger-menu" id="hamburger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="about-main">
+		<div class="container">
+			<h2 class="page-title animate-on-scroll">Upcoming Events</h2>
+			<p class="page-subtitle animate-on-scroll">Join us for exciting events, workshops, and networking opportunities</p>
+			
+			<!-- Event Filter Tabs -->
+			<div class="event-filters animate-on-scroll">
+				<button class="filter-tab active" data-filter="all">All Events</button>
+				<button class="filter-tab" data-filter="upcoming">Upcoming</button>
+				<button class="filter-tab" data-filter="past">Past Events</button>
+				<button class="filter-tab" data-filter="rolling">Rolling</button>
+			</div>
+
+			<!-- Events Grid -->
+			<div class="events-grid">
+				<!-- Event 1: Game Night -->
+				<div class="event-card animate-on-scroll" data-category="upcoming" data-date="2025-10-28">
+					<div class="event-image">
+						<img src="assets/img/Game Night.jpeg" alt="Game Night" onerror="this.style.display='none'" />
+						<div class="event-date-badge">
+							<span class="month">Oct</span>
+							<span class="day">28</span>
+						</div>
+					</div>
+					<div class="event-content">
+						<div class="event-meta">
+							<span class="event-category">Brotherhood</span>
+							<span class="event-status upcoming">Upcoming</span>
+						</div>
+						<h3 class="event-title">Game Night</h3>
+						<p class="event-description">Join us for a fun game night with cards and board games! Prizes will be awarded for pledges and brothers. A great way to bond and have some friendly competition.</p>
+						<div class="event-details">
+							<div class="detail-item">
+								<span class="detail-icon">📅</span>
+								<span class="detail-text">Tuesday, October 28th</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-icon">🕐</span>
+								<span class="detail-text">5:00 PM - 6:00 PM</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-icon">📍</span>
+								<span class="detail-text">O'Brian 209</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Event 2: Food Drive -->
+				<div class="event-card animate-on-scroll" data-category="rolling" data-date="2025-11-09">
+					<div class="event-image">
+						<img src="assets/img/Food Drive.jpeg" alt="Food Drive" onerror="this.style.display='none'" />
+						<div class="event-date-badge">
+							<span class="month">Nov</span>
+							<span class="day">9</span>
+						</div>
+					</div>
+					<div class="event-content">
+						<div class="event-meta">
+							<span class="event-category">Community Service</span>
+							<span class="event-status rolling">Rolling</span>
+						</div>
+						<h3 class="event-title">Food Drive</h3>
+						<p class="event-description">Help us collect non-perishable food items for local families in need. Drop off donations at our collection point and make a difference in our community.</p>
+						<div class="event-details">
+							<div class="detail-item">
+								<span class="detail-icon">📅</span>
+								<span class="detail-text">Until November 9th</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-icon">📍</span>
+								<span class="detail-text">3rd Floor Lockwood</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Event 3: Past Event - Pie a Business Major -->
+				<div class="event-card past-event animate-on-scroll" data-category="past" data-date="2024-10-08">
+					<div class="event-image">
+						<img src="assets/img/To pie a business major.jpg" alt="Pie a Business Major Event" onerror="this.style.display='none'" />
+						<div class="event-date-badge">
+							<span class="month">Oct</span>
+							<span class="day">8-10</span>
+						</div>
+					</div>
+					<div class="event-content">
+						<div class="event-meta">
+							<span class="event-category">Fundraiser</span>
+							<span class="event-status completed">Completed</span>
+						</div>
+						<h3 class="event-title">"Pie a Business Major" Event</h3>
+						<p class="event-description">Our successful fundraising event where students paid to throw pies at our brave business majors. Raised funds for Eta Tau's club activities and community service projects.</p>
+						<div class="event-details">
+							<div class="detail-item">
+								<span class="detail-icon">📅</span>
+								<span class="detail-text">October 8-10, 2024</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-icon">📍</span>
+								<span class="detail-text">In front of Student Union</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Event 4: Tie Tying Competition -->
+				<div class="event-card past-event animate-on-scroll" data-category="past" data-date="2025-10-21">
+					<div class="event-image">
+						<img src="assets/img/Tie tying competition.jpeg" alt="Tie Tying Competition" onerror="this.style.display='none'" />
+						<div class="event-date-badge">
+							<span class="month">Oct</span>
+							<span class="day">21</span>
+						</div>
+					</div>
+					<div class="event-content">
+						<div class="event-meta">
+							<span class="event-category">Professionalism</span>
+							<span class="event-status completed">Completed</span>
+						</div>
+						<h3 class="event-title">Tie Tying Competition</h3>
+						<p class="event-description">Brothers and Pledges competed with eachother to tye ties the fastest. Prizes were awarded to the fastest team!</p>
+						<div class="event-details">
+							<div class="detail-item">
+								<span class="detail-icon">📅</span>
+								<span class="detail-text">October 21, 2025</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-icon">🕐</span>
+								<span class="detail-text">7:00 PM</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-icon">📍</span>
+								<span class="detail-text">214 O'Brian</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Event 5: Field Day -->
+				<div class="event-card past-event animate-on-scroll" data-category="past" data-date="2025-10-18">
+					<div class="event-image">
+						<img src="assets/img/event-4.jpg" alt="Field Day" onerror="this.style.display='none'" />
+						<div class="event-date-badge">
+							<span class="month">Oct</span>
+							<span class="day">18</span>
+						</div>
+					</div>
+					<div class="event-content">
+						<div class="event-meta">
+							<span class="event-category">Brotherhood</span>
+							<span class="event-status completed">Completed</span>
+						</div>
+						<h3 class="event-title">Field Day</h3>
+						<p class="event-description">A fun outdoor competition day with various games and activities. Brothers and pledges participated in team challenges and friendly competitions to build camaraderie and strengthen bonds.</p>
+						<div class="event-details">
+							<div class="detail-item">
+								<span class="detail-icon">📅</span>
+								<span class="detail-text">October 18, 2025</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-icon">🕐</span>
+								<span class="detail-text">3:00 PM - 5:00 PM</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-icon">📍</span>
+								<span class="detail-text">North Campus Tennis Courts</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Contact Section -->
+			<div class="contact-section animate-on-scroll">
+				<h2 class="section-title">Questions About Our Events?</h2>
+				<p>Contact our events team for more information or to suggest new events.</p>
+				<a href="contact.html" class="btn secondary">Contact Us</a>
+			</div>
+		</div>
+	</main>
+
+	<!-- Slide-over Navigation Menu -->
+	<div class="slide-over-menu" id="slide-over-menu">
+		<div class="slide-over-content">
+			<div class="slide-over-header">
+				<h2>Navigation</h2>
+				<button class="close-menu" id="close-menu">&times;</button>
+			</div>
+			<nav class="slide-over-nav">
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="members.html">Members</a>
+				<a href="pledge-education.html">Pledge Education</a>
+				<a href="fundraisers.html">Fundraisers</a>
+				<a href="events.html" class="active">Events</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+				</div>
+			</div>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>© <span id="year"></span> Eta Tau</span>
+			<div class="social">
+				<a href="https://instagram.com/weateatau" target="_blank">Instagram</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+		
+		// Slide-over menu functionality
+		const hamburgerMenu = document.getElementById('hamburger-menu');
+		const slideOverMenu = document.getElementById('slide-over-menu');
+		const closeMenu = document.getElementById('close-menu');
+		
+		hamburgerMenu.addEventListener('click', function() {
+			slideOverMenu.classList.add('active');
+		});
+		
+		closeMenu.addEventListener('click', function() {
+			slideOverMenu.classList.remove('active');
+		});
+		
+		// Close menu when clicking outside
+		slideOverMenu.addEventListener('click', function(e) {
+			if (e.target === slideOverMenu) {
+				slideOverMenu.classList.remove('active');
+			}
+		});
+
+		// Event registration functionality
+		function registerEvent(eventType) {
+			const messages = {
+				'workshop': 'Thank you for registering for the Professional Development Workshop! You will receive a confirmation email shortly.',
+				'mixer': 'Thank you for registering for the Holiday Networking Mixer! We look forward to seeing you there.',
+				'panel': 'Thank you for registering for the Industry Leaders Panel! You will receive event details via email.'
+			};
+			alert(messages[eventType] || 'Thank you for your interest! Please contact us for more information.');
+		}
+
+		// Event filtering functionality
+		const filterTabs = document.querySelectorAll('.filter-tab');
+		const eventCards = document.querySelectorAll('.event-card');
+
+		filterTabs.forEach(tab => {
+			tab.addEventListener('click', function() {
+				// Remove active class from all tabs
+				filterTabs.forEach(t => t.classList.remove('active'));
+				// Add active class to clicked tab
+				this.classList.add('active');
+
+				const filter = this.getAttribute('data-filter');
+				
+				eventCards.forEach(card => {
+					const category = card.getAttribute('data-category');
+					
+					if (filter === 'all' || 
+						(filter === 'upcoming' && category.includes('upcoming')) ||
+						(filter === 'past' && category.includes('past')) ||
+						(filter === 'rolling' && category.includes('rolling'))) {
+						card.style.display = 'block';
+						card.classList.add('filter-match');
+					} else {
+						card.style.display = 'none';
+						card.classList.remove('filter-match');
+					}
+				});
+			});
+		});
+
+		// Scroll animations
+		const observerOptions = {
+			threshold: 0.1,
+			rootMargin: '0px 0px -50px 0px'
+		};
+		
+		const observer = new IntersectionObserver(function(entries) {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('animate-in');
+				}
+			});
+		}, observerOptions);
+		
+		// Observe elements for animation
+		document.addEventListener('DOMContentLoaded', function() {
+			const elementsToAnimate = document.querySelectorAll('.page-title, .event-filters, .event-card, .contact-section');
+			elementsToAnimate.forEach((el, index) => {
+				el.classList.add('animate-on-scroll');
+				el.style.animationDelay = `${index * 0.1}s`;
+				observer.observe(el);
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+

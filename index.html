@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Eta Tau Club — Home</title>
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="icon" href="assets/img/logo.png" />
+</head>
+<body class="home">
+	<header class="site-header">
+		<div class="container">
+			<nav class="primary-nav">
+				<a class="brand" href="index.html">
+					<img src="assets/img/logo-Picsart-BackgroundRemover-Picsart-BackgroundRemover.png" alt="Eta Tau logo" />
+				</a>
+				<div id="site-menu" class="nav-links" data-nav-menu>
+					<a href="about.html">About Us</a>
+					<a href="contact.html">Contact Us</a>
+				</div>
+				<button class="hamburger-menu" id="hamburger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<button class="btn" data-nav-toggle aria-expanded="false" aria-controls="site-menu" style="display:none">Menu</button>
+			</nav>
+		</div>
+	</header>
+
+	<section class="hero hero-full hero-photo" style="background-image: url('assets/img/campus.jpg?v=2')">
+		<div class="container hero-inner">
+			<h1 class="display">Eta Tau</h1>
+			<a class="btn-learn-more" href="about.html">About Us</a>
+		</div>
+	</section>
+
+	<!-- Members Section -->
+	<main class="about-main" id="members-section" style="display: none;">
+		<div class="container">
+			<h2 class="page-title">Meet our Members</h2>
+			
+			<div class="members-grid">
+				<div class="member-card" onclick="showMemberModal('Kallista Bertini', 'Pledge Class President', 'Business Administration', 'Served on jury of a murder trial', 'Brother Cederman-Kobayashi', 'assets/img/Kallista Bertini.png')">
+					<div class="member-photo">
+						<img src="assets/img/Kallista Bertini.png" alt="Kallista Bertini" />
+					</div>
+					<h3 class="member-name">Kallista Bertini</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Nick Bivona', 'Brotherhood', 'Accounting', 'Last name is a town in italy', 'Brother Tasnim', 'assets/img/Nick Bivona.png')">
+					<div class="member-photo">
+						<img src="assets/img/Nick Bivona.png" alt="Nick Bivona" />
+					</div>
+					<h3 class="member-name">Nick Bivona</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Victoria Camacho Mande', 'Head of Fundraising', 'Marketing', 'Speaks Spanish', 'Brother Billah', 'assets/img/Victoria Camacho Mande.png')">
+					<div class="member-photo">
+						<img src="assets/img/Victoria Camacho Mande.png" alt="Victoria Camacho Mande" />
+					</div>
+					<h3 class="member-name">Victoria Camacho Mande</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Andrea Doan', 'Fundraising', 'Finance', 'Family owns nine nail salons', 'Brother Dreher', 'assets/img/Andrea Doan.png')">
+					<div class="member-photo">
+						<img src="assets/img/Andrea Doan.png" alt="Andrea Doan" />
+					</div>
+					<h3 class="member-name">Andrea Doan</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Henry Ehmann', 'Brotherhood', 'Finance', 'Really good at Wii golf', 'Brother Galitizine', 'assets/img/Henry Ehmann.png')">
+					<div class="member-photo">
+						<img src="assets/img/Henry Ehmann.png" alt="Henry Ehmann" />
+					</div>
+					<h3 class="member-name">Henry Ehmann</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Antonio Falcone', 'Professionalism', 'Finance', 'Professional tap dancer', 'Brother Warner', 'assets/img/Antonio Falcone.png')">
+					<div class="member-photo">
+						<img src="assets/img/Antonio Falcone.png" alt="Antonio Falcone" />
+					</div>
+					<h3 class="member-name">Antonio Falcone</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Angel Felix', 'Fundraising', 'Finance and HR', 'National rated chess player', 'Brother Blufarb', 'assets/img/Angel Felix.png')">
+					<div class="member-photo">
+						<img src="assets/img/Angel Felix.png" alt="Angel Felix" />
+					</div>
+					<h3 class="member-name">Angel Felix</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Abhi Kathiriya', 'Professionalism', 'Finance', 'Born in India', 'Brother Huang', 'assets/img/Abhi Kathiriya.png')">
+					<div class="member-photo">
+						<img src="assets/img/Abhi Kathiriya.png" alt="Abhi Kathiriya" />
+					</div>
+					<h3 class="member-name">Abhi Kathiriya</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Jonathan Lamb', 'Head of Professionalism', 'Finance', 'Plays the guitar', 'Brother Bessel', 'assets/img/Jonathan Lamb.png')">
+					<div class="member-photo">
+						<img src="assets/img/Jonathan Lamb.png" alt="Jonathan Lamb" />
+					</div>
+					<h3 class="member-name">Jonathan Lamb</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Brennan Lang', 'Head of Operations', 'Finance', 'Enjoys freestyle skiing', 'Brother Baldwa', 'assets/img/Brennan Lang.png')">
+					<div class="member-photo">
+						<img src="assets/img/Brennan Lang.png" alt="Brennan Lang" />
+					</div>
+					<h3 class="member-name">Brennan Lang</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Henry Martin', 'Operations', 'Business Administration', 'Is an Eagle Scout', 'Brother Zivan', 'assets/img/Henry Martin.png')">
+					<div class="member-photo">
+						<img src="assets/img/Henry Martin.png" alt="Henry Martin" />
+					</div>
+					<h3 class="member-name">Henry Martin</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Owen Mintzer', 'Fundraising', 'Finance', 'Can solve a rubix cube', 'Brother Parker', 'assets/img/Owen Mintzer.png')">
+					<div class="member-photo">
+						<img src="assets/img/Owen Mintzer.png" alt="Owen Mintzer" />
+					</div>
+					<h3 class="member-name">Owen Mintzer</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Abigail Murray', 'Professionalism', 'HR & Management', 'Knows how to play the violin', 'Brother Al-Harthi', 'assets/img/Abigail Murray.png')">
+					<div class="member-photo">
+						<img src="assets/img/Abigail Murray.png" alt="Abigail Murray" />
+					</div>
+					<h3 class="member-name">Abigail Murray</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Adrian Palladino', 'Operations', 'Finance', 'Likes to snowboard', 'Brother Manoli', 'assets/img/Adrian Palladino.png')">
+					<div class="member-photo">
+						<img src="assets/img/Adrian Palladino.png" alt="Adrian Palladino" />
+					</div>
+					<h3 class="member-name">Adrian Palladino</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Catherine Quan', 'Community Service', 'Finance', 'Her cat knows how to use the toilet', 'Brother Chen', 'assets/img/Catherine Quan.png')">
+					<div class="member-photo">
+						<img src="assets/img/Catherine Quan.png" alt="Catherine Quan" />
+					</div>
+					<h3 class="member-name">Catherine Quan</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Matt Sciara', 'Community Service', 'Business Administration', 'Plays the French Horn', 'Brother Kumar', 'assets/img/Matt Sciara.png')">
+					<div class="member-photo">
+						<img src="assets/img/Matt Sciara.png" alt="Matt Sciara" />
+					</div>
+					<h3 class="member-name">Matt Sciara</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Abbey Tetrault', 'Head of Brotherhood', 'Marketing', 'Competed in nationals for track', 'Brother Son', 'assets/img/Abbey Tetrault.png')">
+					<div class="member-photo">
+						<img src="assets/img/Abbey Tetrault.png" alt="Abbey Tetrault" />
+					</div>
+					<h3 class="member-name">Abbey Tetrault</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Ahmed Zahid', 'Committee', 'Business Administration', 'Add fun fact here', 'Add your big information here', 'assets/img/Ahmed Zahid.png')">
+					<div class="member-photo">
+						<img src="assets/img/Ahmed Zahid.png" alt="Ahmed Zahid" />
+					</div>
+					<h3 class="member-name">Ahmed Zahid</h3>
+				</div>
+				
+				<div class="member-card" onclick="showMemberModal('Ryan Zima', 'Operations', 'Business Administration', 'Can solve a rubix cube faster than Owen Mintzer', 'Brother Lerner-Morelle', 'assets/img/Ryan Zima.png')">
+					<div class="member-photo">
+						<img src="assets/img/Ryan Zima.png" alt="Ryan Zima" />
+					</div>
+					<h3 class="member-name">Ryan Zima</h3>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Slide-over Navigation Menu -->
+	<div class="slide-over-menu" id="slide-over-menu">
+		<div class="slide-over-content">
+			<div class="slide-over-header">
+				<h2>Navigation</h2>
+				<button class="close-menu" id="close-menu">&times;</button>
+			</div>
+			<nav class="slide-over-nav">
+				<a href="index.html" class="active">Home</a>
+				<a href="about.html">About</a>
+				<a href="members.html">Members</a>
+				<a href="pledge-education.html">Pledge Education</a>
+				<a href="fundraisers.html">Fundraisers</a>
+				<a href="events.html">Events</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Member Detail Modal -->
+	<div class="member-modal" id="member-modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="member-name-large" id="modal-name">Member Name</h2>
+				<button class="close-modal" id="close-modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="member-photo-large">
+					<img id="modal-photo" src="" alt="Member Photo" />
+				</div>
+				<div class="member-info">
+					<div class="info-section">
+						<h3>Name</h3>
+						<p id="modal-name-text">Member Name</p>
+					</div>
+					<div class="info-section">
+						<h3>Committee</h3>
+						<p id="modal-role">Committee</p>
+					</div>
+					<div class="info-section">
+						<h3>Major</h3>
+						<p id="modal-major">Business Administration</p>
+					</div>
+					<div class="info-section">
+						<h3>Fun Fact</h3>
+						<p id="modal-fun-fact">Add fun fact here</p>
+					</div>
+					<div class="info-section">
+						<h3>Big</h3>
+						<p id="modal-big">Add your big information here</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer intentionally omitted on home to keep full-screen hero without scroll -->
+
+	<script src="assets/js/main.js"></script>
+	<script>
+		// Set year (only if element exists)
+		const yearElement = document.getElementById('year');
+		if (yearElement) {
+			yearElement.textContent = new Date().getFullYear();
+		}
+		
+		// Slide-over menu functionality
+		document.addEventListener('DOMContentLoaded', function() {
+			const hamburgerMenu = document.getElementById('hamburger-menu');
+			const slideOverMenu = document.getElementById('slide-over-menu');
+			const closeMenu = document.getElementById('close-menu');
+			
+			if (hamburgerMenu && slideOverMenu && closeMenu) {
+				hamburgerMenu.addEventListener('click', function(e) {
+					e.preventDefault();
+					slideOverMenu.classList.add('active');
+				});
+				
+				closeMenu.addEventListener('click', function(e) {
+					e.preventDefault();
+					slideOverMenu.classList.remove('active');
+				});
+				
+				// Close menu when clicking outside
+				slideOverMenu.addEventListener('click', function(e) {
+					if (e.target === slideOverMenu) {
+						slideOverMenu.classList.remove('active');
+					}
+				});
+			}
+		});
+
+		// Member modal functionality
+		function showMemberModal(name, role, major, funFact, big, photoSrc) {
+			document.getElementById('modal-name').textContent = name;
+			document.getElementById('modal-name-text').textContent = name;
+			document.getElementById('modal-role').textContent = role;
+			document.getElementById('modal-major').textContent = major;
+			document.getElementById('modal-fun-fact').textContent = funFact;
+			document.getElementById('modal-big').textContent = big;
+			document.getElementById('modal-photo').src = photoSrc;
+			document.getElementById('modal-photo').alt = name;
+			document.getElementById('member-modal').style.display = 'flex';
+		}
+
+		function closeMemberModal() {
+			document.getElementById('member-modal').style.display = 'none';
+		}
+
+		// Close modal when clicking outside or on close button
+		document.addEventListener('DOMContentLoaded', function() {
+			const modal = document.getElementById('member-modal');
+			const closeModalBtn = document.getElementById('close-modal');
+			
+			if (closeModalBtn) {
+				closeModalBtn.addEventListener('click', closeMemberModal);
+			}
+			
+			if (modal) {
+				modal.addEventListener('click', function(e) {
+					if (e.target === modal) {
+						closeMemberModal();
+					}
+				});
+			}
+		});
+
+		// Show members section when clicking Members link
+		document.addEventListener('DOMContentLoaded', function() {
+			const membersLink = document.querySelector('a[href="members.html"]');
+			const membersSection = document.getElementById('members-section');
+			const hero = document.querySelector('.hero');
+			
+			if (membersLink && membersSection) {
+				membersLink.addEventListener('click', function(e) {
+					e.preventDefault();
+					hero.style.display = 'none';
+					membersSection.style.display = 'block';
+					window.scrollTo(0, 0);
+				});
+			}
+		});
+	</script>
+</body>
+</html>
+
+

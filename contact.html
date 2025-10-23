@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Eta Tau Club — Contact</title>
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="icon" href="assets/img/logo.png" />
+</head>
+<body>
+	<header class="about-header">
+		<div class="container">
+			<div class="about-nav">
+				<h1 class="about-title">Contact Us</h1>
+				<button class="hamburger-menu" id="hamburger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="about-main">
+		<div class="container">
+			<section>
+				<h2>Send a Message</h2>
+				<form id="contact-form" action="mailto:ryan.zima2026@gmail.com" method="post" enctype="text/plain" onsubmit="handleContactSubmit(event)">
+					<label for="name">Name</label>
+					<input id="name" name="name" type="text" placeholder="Your name" required />
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email" placeholder="you@example.com" required />
+					<label for="message">Message</label>
+					<textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+					<div class="spacer-sm"></div>
+					<button class="btn primary" type="submit">Send</button>
+					<p id="form-status" class="muted" role="status" aria-live="polite"></p>
+				</form>
+			</section>
+			<section>
+				<h2>Other Ways to Reach Us</h2>
+				<p>Instagram: <a href="https://instagram.com/weateatau" target="_blank">@weateatau</a></p>
+			</section>
+		</div>
+	</main>
+
+	<!-- Slide-over Navigation Menu -->
+	<div class="slide-over-menu" id="slide-over-menu">
+		<div class="slide-over-content">
+			<div class="slide-over-header">
+				<h2>Navigation</h2>
+				<button class="close-menu" id="close-menu">&times;</button>
+			</div>
+			<nav class="slide-over-nav">
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="members.html">Members</a>
+				<a href="pledge-education.html">Pledge Education</a>
+				<a href="fundraisers.html">Fundraisers</a>
+				<a href="events.html">Events</a>
+				<a href="contact.html" class="active">Contact</a>
+			</nav>
+		</div>
+	</div>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>© <span id="year"></span> Eta Tau</span>
+			<div class="social">
+				<a href="https://instagram.com/weateatau" target="_blank">Instagram</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+		
+		// Slide-over menu functionality
+		const hamburgerMenu = document.getElementById('hamburger-menu');
+		const slideOverMenu = document.getElementById('slide-over-menu');
+		const closeMenu = document.getElementById('close-menu');
+		
+		hamburgerMenu.addEventListener('click', function() {
+			slideOverMenu.classList.add('active');
+		});
+		
+		closeMenu.addEventListener('click', function() {
+			slideOverMenu.classList.remove('active');
+		});
+		
+		// Close menu when clicking outside
+		slideOverMenu.addEventListener('click', function(e) {
+			if (e.target === slideOverMenu) {
+				slideOverMenu.classList.remove('active');
+			}
+		});
+
+		function handleContactSubmit(e) {
+			e.preventDefault();
+			var form = e.target;
+			var status = document.getElementById('form-status');
+			
+			// Prepare email data
+			var name = form.name.value;
+			var email = form.email.value;
+			var message = form.message.value;
+			var timestamp = new Date().toLocaleString();
+			
+			// Create email body
+			var emailBody = "New message from Eta Tau website contact form:\n\n";
+			emailBody += "Name: " + name + "\n";
+			emailBody += "Email: " + email + "\n";
+			emailBody += "Date: " + timestamp + "\n\n";
+			emailBody += "Message:\n" + message;
+			
+			// Create mailto link
+			var mailtoLink = "mailto:ryan.zima2026@gmail.com?subject=Eta Tau Contact Form&body=" + encodeURIComponent(emailBody);
+			
+			// Open email client
+			window.location.href = mailtoLink;
+			
+			// Save locally as backup
+			try {
+				var data = {
+					name: name,
+					email: email,
+					message: message,
+					timestamp: new Date().toISOString()
+				};
+				var existing = JSON.parse(localStorage.getItem('etaTauMessages') || '[]');
+				existing.push(data);
+				localStorage.setItem('etaTauMessages', JSON.stringify(existing));
+				status.textContent = 'Your email client should open with a pre-filled message. Please send it to complete your submission.';
+			} catch (err) {
+				status.textContent = 'Your email client should open with a pre-filled message. Please send it to complete your submission.';
+			}
+			
+			form.reset();
+		}
+	</script>
+</body>
+</html>
+
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Eta Tau Club — Pledge Education</title>
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="icon" href="assets/img/logo.png" />
+</head>
+<body>
+	<header class="about-header">
+		<div class="container">
+			<div class="about-nav">
+				<h1 class="about-title">Pledge Education</h1>
+				<button class="hamburger-menu" id="hamburger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="about-main">
+		<div class="container">
+			<h2 class="page-title animate-on-scroll">Meet our Pledge Educators</h2>
+			<h3 class="page-subtitle animate-on-scroll">Vice President of Pledge Education</h3>
+			
+			<div class="pledge-educator-single">
+				<div class="pledge-educator-card clickable-card" onclick="showPledgeEducatorModal('Vice President', 'S. Austin Tuel', 'Vice President of Pledge Education', 'Prepares pledges for admission into the Fraternity, by establishing an appreciation in fraternal history and personal development.')">
+					<div class="pledge-educator-photo">
+						<img src="assets/img/Austin Tuel.png" alt="Austin Tuel" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+						<div class="photo-placeholder" style="display: none;">
+							<p>Add Photo</p>
+						</div>
+					</div>
+					<h4 class="pledge-educator-name">S. Austin Tuel</h4>
+				</div>
+			</div>
+			
+			<h3 class="page-subtitle">Pledge Education Committee</h3>
+			
+			<div class="pledge-educators-grid">
+				<div class="pledge-educator-card clickable-card" onclick="showPledgeEducatorModal('Professionalism', 'Riya Kumar', 'Pledge Education Committee', 'Educates the pledge class on all aspects of professionalism.')">
+					<h3 class="pledge-educator-role">Professionalism</h3>
+					<div class="pledge-educator-photo">
+						<img src="assets/img/Riya Kumar.png" alt="Riya Kumar" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+						<div class="photo-placeholder" style="display: none;">
+							<p>Add Photo</p>
+						</div>
+					</div>
+					<h4 class="pledge-educator-name">Riya Kumar</h4>
+				</div>
+				
+				<div class="pledge-educator-card clickable-card" onclick="showPledgeEducatorModal('Community Service', 'William Siegel', 'Pledge Education Committee', 'Demonstrates our pillar of service by overseeing events that give back to the community.')">
+					<h3 class="pledge-educator-role">Community Service</h3>
+					<div class="pledge-educator-photo">
+						<img src="assets/img/William Siegel.png" alt="William Siegel" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+						<div class="photo-placeholder" style="display: none;">
+							<p>Add Photo</p>
+						</div>
+					</div>
+					<h4 class="pledge-educator-name">William Siegel</h4>
+				</div>
+				
+				<div class="pledge-educator-card clickable-card" onclick="showPledgeEducatorModal('Fundraising', 'Ryan Deasy', 'Pledge Education Committee', 'Prepares pledges to host events, receive revenues and distribute funds towards Eta Sigma.')">
+					<h3 class="pledge-educator-role">Fundraising</h3>
+					<div class="pledge-educator-photo">
+						<img src="assets/img/Ryan Deasy.png" alt="Ryan Deasy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+						<div class="photo-placeholder" style="display: none;">
+							<p>Add Photo</p>
+						</div>
+					</div>
+					<h4 class="pledge-educator-name">Ryan Deasy</h4>
+				</div>
+				
+				<div class="pledge-educator-card clickable-card" onclick="showPledgeEducatorModal('Operations', 'Theresa Urzi', 'Pledge Education Committee', 'Oversees that the pledge class has an active involvment within DSP and UB organizations.')">
+					<h3 class="pledge-educator-role">Operations</h3>
+					<div class="pledge-educator-photo">
+						<img src="assets/img/Theresa Urzi.png" alt="Theresa Urzi" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+						<div class="photo-placeholder" style="display: none;">
+							<p>Add Photo</p>
+						</div>
+					</div>
+					<h4 class="pledge-educator-name">Theresa Urzi</h4>
+				</div>
+				
+				<div class="pledge-educator-card clickable-card" onclick="showPledgeEducatorModal('Brotherhood', 'Maruf Billah', 'Pledge Education Committee', 'Represents our brotherhood as a liaison, training pledges on how to create fraternal bonds.')">
+					<h3 class="pledge-educator-role">Brotherhood</h3>
+					<div class="pledge-educator-photo">
+						<img src="assets/img/Maruf Billah.png" alt="Maruf Billah" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+						<div class="photo-placeholder" style="display: none;">
+							<p>Add Photo</p>
+						</div>
+					</div>
+					<h4 class="pledge-educator-name">Maruf Billah</h4>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Pledge Educator Modal -->
+	<div class="pledge-educator-modal" id="pledge-educator-modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 id="modal-photo-name">Educator Name</h3>
+				<button class="close-modal" id="close-pledge-modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="pledge-educator-photo-large">
+					<img id="modal-educator-photo" src="" alt="Educator Photo" style="display: none;">
+					<div class="photo-placeholder-large">
+						<p>Add Photo</p>
+					</div>
+				</div>
+				<div class="pledge-educator-info">
+					<div class="info-section">
+						<h3>Role</h3>
+						<p id="modal-educator-description" class="role-description">Description will appear here</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Slide-over Navigation Menu -->
+	<div class="slide-over-menu" id="slide-over-menu">
+		<div class="slide-over-content">
+			<div class="slide-over-header">
+				<h2>Navigation</h2>
+				<button class="close-menu" id="close-menu">&times;</button>
+			</div>
+			<nav class="slide-over-nav">
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="members.html">Members</a>
+				<a href="pledge-education.html" class="active">Pledge Education</a>
+				<a href="fundraisers.html">Fundraisers</a>
+				<a href="events.html">Events</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</div>
+	</div>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>© <span id="year"></span> Eta Tau</span>
+			<div class="social">
+				<a href="https://instagram.com/weateatau" target="_blank">Instagram</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+		
+		// Slide-over menu functionality
+		const hamburgerMenu = document.getElementById('hamburger-menu');
+		const slideOverMenu = document.getElementById('slide-over-menu');
+		const closeMenu = document.getElementById('close-menu');
+		
+		hamburgerMenu.addEventListener('click', function() {
+			slideOverMenu.classList.add('active');
+		});
+		
+		closeMenu.addEventListener('click', function() {
+			slideOverMenu.classList.remove('active');
+		});
+		
+		// Close menu when clicking outside
+		slideOverMenu.addEventListener('click', function(e) {
+			if (e.target === slideOverMenu) {
+				slideOverMenu.classList.remove('active');
+			}
+		});
+		
+		// Pledge Educator Modal functionality
+		const pledgeEducatorModal = document.getElementById('pledge-educator-modal');
+		const closePledgeModal = document.getElementById('close-pledge-modal');
+		
+		closePledgeModal.addEventListener('click', function() {
+			pledgeEducatorModal.style.display = 'none';
+		});
+		
+		// Close modal when clicking outside
+		pledgeEducatorModal.addEventListener('click', function(e) {
+			if (e.target === pledgeEducatorModal) {
+				pledgeEducatorModal.style.display = 'none';
+			}
+		});
+	</script>
+	
+	<script>
+		// Function to show pledge educator modal
+		function showPledgeEducatorModal(role, name, committee, description) {
+			document.getElementById('modal-photo-name').textContent = name;
+			document.getElementById('modal-educator-description').textContent = description;
+			
+			const photoElement = document.getElementById('modal-educator-photo');
+			const placeholderElement = photoElement.nextElementSibling;
+			
+			// Reset display states
+			photoElement.style.display = 'block';
+			placeholderElement.style.display = 'none';
+			
+			// Set the image source - handle special case for Austin Tuel
+			if (name === 'S. Austin Tuel') {
+				photoElement.src = 'assets/img/Austin Tuel.png';
+			} else {
+				photoElement.src = `assets/img/${name}.png`;
+			}
+			
+			// Handle image load error
+			photoElement.onerror = function() {
+				console.log('Image failed to load:', `assets/img/${name}.png`);
+				this.style.display = 'none';
+				placeholderElement.style.display = 'block';
+			};
+			
+			// Handle successful image load
+			photoElement.onload = function() {
+				console.log('Image loaded successfully:', `assets/img/${name}.png`);
+				this.style.display = 'block';
+				placeholderElement.style.display = 'none';
+			};
+			
+			document.getElementById('pledge-educator-modal').style.display = 'flex';
+		}
+		
+		// Scroll animations
+		const observerOptions = {
+			threshold: 0.1,
+			rootMargin: '0px 0px -50px 0px'
+		};
+		
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('animate-in');
+				}
+			});
+		}, observerOptions);
+		
+		// Observe all elements with animate-on-scroll class
+		document.addEventListener('DOMContentLoaded', function() {
+			const animateElements = document.querySelectorAll('.animate-on-scroll');
+			animateElements.forEach(el => observer.observe(el));
+			
+			// Add floating particles effect
+			createFloatingParticles();
+		});
+		
+		// Floating particles effect
+		function createFloatingParticles() {
+			const container = document.querySelector('.about-main');
+			const particleCount = 20;
+			
+			for (let i = 0; i < particleCount; i++) {
+				const particle = document.createElement('div');
+				particle.className = 'floating-particle';
+				particle.style.cssText = `
+					position: absolute;
+					width: 4px;
+					height: 4px;
+					background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+					border-radius: 50%;
+					pointer-events: none;
+					opacity: 0.6;
+					animation: float ${3 + Math.random() * 4}s ease-in-out infinite;
+					left: ${Math.random() * 100}%;
+					top: ${Math.random() * 100}%;
+					animation-delay: ${Math.random() * 2}s;
+				`;
+				container.appendChild(particle);
+			}
+		}
+	</script>
+</body>
+</html>
+
+

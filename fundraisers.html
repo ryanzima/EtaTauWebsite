@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Eta Tau Club — Fundraisers</title>
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="icon" href="assets/img/logo.png" />
+</head>
+<body>
+	<header class="about-header">
+		<div class="container">
+			<div class="about-nav">
+				<h1 class="about-title">Fundraisers</h1>
+				<button class="hamburger-menu" id="hamburger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="about-main">
+		<div class="container">
+			<h2 class="page-title animate-on-scroll">Support Our Mission</h2>
+			<p class="page-subtitle animate-on-scroll">Help us make a difference through our current fundraising initiatives</p>
+			
+			<!-- Fundraising Stats -->
+			<div class="fundraising-stats animate-on-scroll">
+				<div class="stat-item">
+					<span class="stat-number" data-target="1">0</span>
+					<span class="stat-label">Active Campaigns</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number" data-target="4000">0</span>
+					<span class="stat-label">Goal ($)</span>
+				</div>
+			</div>
+
+			<!-- Current Fundraisers -->
+			<h2 class="section-title animate-on-scroll">Current Fundraisers</h2>
+			<div class="fundraisers-grid">
+				<!-- Fundraiser 1: Chocolate Fundraiser -->
+				<div class="fundraiser-card animate-on-scroll">
+					<div class="fundraiser-image">
+						<img src="assets/img/Chocolate Fundraiser.jpeg" alt="Chocolate Fundraiser" onerror="this.style.display='none'" />
+					</div>
+					<div class="fundraiser-content">
+						<h3 class="fundraiser-title">Chocolate Fundraiser</h3>
+						<p class="fundraiser-description">Support our business club Eta Tau by purchasing our delicious chocolate bars! We are selling premium, high quality chocolate to raise funds for our community and professional events.</p>
+						
+						<div class="fundraiser-details">
+							<div class="detail-item">
+								<span class="detail-label">Deadline:</span>
+								<span class="detail-value">10/24/25</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-label">Price:</span>
+								<span class="detail-value">$2 per bar</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Past Fundraisers -->
+			<h2 class="section-title animate-on-scroll">Past Fundraisers</h2>
+			<div class="fundraisers-grid">
+				<!-- Fundraiser 2: Pie a Business Major -->
+				<div class="fundraiser-card past-fundraiser animate-on-scroll">
+					<div class="fundraiser-image">
+						<img src="assets/img/To pie a business major.jpg" alt="Pie a Business Major" onerror="this.style.display='none'" />
+					</div>
+					<div class="fundraiser-content">
+						<h3 class="fundraiser-title">"Pie a Business Major" Event</h3>
+						<p class="fundraiser-description">Pay to throw a pie in our faces! Our brave business majors are volunteering to get pied for a good cause. This event runs from 10/8/25 to 10/10/25. All proceeds go to Eta Tau's club activities and community service projects.</p>
+						
+						<div class="fundraiser-details">
+							<div class="detail-item">
+								<span class="detail-label">Event Dates:</span>
+								<span class="detail-value">10/8/25 to 10/10/25</span>
+							</div>
+							<div class="detail-item">
+								<span class="detail-label">Price:</span>
+								<span class="detail-value">$5 per pie</span>
+							</div>
+						</div>
+						
+						<div class="fundraiser-status">
+							<span class="status-badge completed">Completed</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Contact Section -->
+			<div class="contact-section animate-on-scroll">
+				<h2 class="section-title">Questions About Our Fundraisers?</h2>
+				<p>Contact our fundraising team for more information.</p>
+				<a href="contact.html" class="btn secondary">Contact Us</a>
+			</div>
+		</div>
+	</main>
+
+	<!-- Slide-over Navigation Menu -->
+	<div class="slide-over-menu" id="slide-over-menu">
+		<div class="slide-over-content">
+			<div class="slide-over-header">
+				<h2>Navigation</h2>
+				<button class="close-menu" id="close-menu">&times;</button>
+			</div>
+			<nav class="slide-over-nav">
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="members.html">Members</a>
+				<a href="pledge-education.html">Pledge Education</a>
+				<a href="fundraisers.html" class="active">Fundraisers</a>
+				<a href="events.html">Events</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</div>
+	</div>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>© <span id="year"></span> Eta Tau</span>
+			<div class="social">
+				<a href="https://instagram.com/weateatau" target="_blank">Instagram</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+		
+		// Slide-over menu functionality
+		const hamburgerMenu = document.getElementById('hamburger-menu');
+		const slideOverMenu = document.getElementById('slide-over-menu');
+		const closeMenu = document.getElementById('close-menu');
+		
+		hamburgerMenu.addEventListener('click', function() {
+			slideOverMenu.classList.add('active');
+		});
+		
+		closeMenu.addEventListener('click', function() {
+			slideOverMenu.classList.remove('active');
+		});
+		
+		// Close menu when clicking outside
+		slideOverMenu.addEventListener('click', function(e) {
+			if (e.target === slideOverMenu) {
+				slideOverMenu.classList.remove('active');
+			}
+		});
+
+		// Animated counter for stats
+		function animateCounter(element, target, duration = 2000) {
+			let start = 0;
+			const increment = target / (duration / 16);
+			const timer = setInterval(() => {
+				start += increment;
+				element.textContent = Math.floor(start);
+				if (start >= target) {
+					element.textContent = target;
+					clearInterval(timer);
+				}
+			}, 16);
+		}
+
+		// Donate button functionality
+		function donateToFundraiser(fundraiserType) {
+			const messages = {
+				'chocolate': 'Thank you for supporting our Chocolate Fundraiser! Please contact us to arrange your chocolate purchase.',
+				'pie': 'Thank you for supporting our "Pie a Business Major" event! We\'ll see you at the event on November 25th!'
+			};
+			alert(messages[fundraiserType] || 'Thank you for your support!');
+		}
+
+		// Scroll animations
+		const observerOptions = {
+			threshold: 0.1,
+			rootMargin: '0px 0px -50px 0px'
+		};
+		
+		const observer = new IntersectionObserver(function(entries) {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('animate-in');
+					
+					// Animate counters when stats section comes into view
+					if (entry.target.classList.contains('fundraising-stats')) {
+						const statNumbers = entry.target.querySelectorAll('.stat-number');
+						statNumbers.forEach(stat => {
+							const target = parseInt(stat.getAttribute('data-target'));
+							animateCounter(stat, target);
+						});
+					}
+				}
+			});
+		}, observerOptions);
+		
+		// Observe elements for animation
+		document.addEventListener('DOMContentLoaded', function() {
+			const elementsToAnimate = document.querySelectorAll('.page-title, .fundraising-stats, .section-title, .fundraiser-card, .contact-section');
+			elementsToAnimate.forEach((el, index) => {
+				el.classList.add('animate-on-scroll');
+				el.style.animationDelay = `${index * 0.1}s`;
+				observer.observe(el);
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Eta Tau Club — About</title>
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<link rel="icon" href="assets/img/logo.png" />
+</head>
+<body>
+	<header class="about-header">
+		<div class="container">
+			<div class="about-nav">
+				<h1 class="about-title">About Eta Tau</h1>
+				<button class="hamburger-menu" id="hamburger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="about-main">
+		<div class="container">
+			<div class="about-content">
+				<div class="about-text">
+					<h2 class="section-title">Who we are</h2>
+					<div class="title-underline"></div>
+					<p class="lead-text">Eta Tau is a professional business club who strives to prepare students for the commercial world. We focus on preparing our members to excel through leadership training, networking experiences, as well as professional development.</p>
+					<p>Beyond career preparation, we emphasize the importance of building a strong, diverse, and supportive community. As one, we aim to prepare the next generation of business professionals.</p>
+				</div>
+				<div class="about-image">
+					<div class="image-container">
+						<img src="assets/img/test.jpg" alt="Eta Tau members" />
+						<div class="image-overlay"></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Our Goal Section -->
+			<div class="goal-section">
+				<div class="goal-content">
+					<h2 class="section-title">Our Goal</h2>
+					<div class="title-underline"></div>
+					<div class="goal-text">
+						<p>To prepare the next generation of business professionals for the commercial world.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Page Navigation Cards -->
+			<div class="page-cards">
+				<div class="page-card">
+					<h3><a href="members.html">Members →</a></h3>
+					<p>Meet our diverse community of 19 dedicated members who bring unique perspectives and skills to Eta Tau. Learn about their backgrounds, achievements, and contributions to our organization.</p>
+					<a href="members.html" class="card-link">See members →</a>
+				</div>
+				<div class="page-card">
+					<h3><a href="pledge-education.html">Pledge Education →</a></h3>
+					<p>Our 6 pledge educators guide new members through our comprehensive development program, fostering leadership skills and professional growth within our community.</p>
+					<a href="pledge-education.html" class="card-link">See educators →</a>
+				</div>
+				<div class="page-card">
+					<h3><a href="fundraisers.html">Fundraisers →</a></h3>
+					<p>Support our initiatives through various fundraising activities. Learn about our current campaigns and how your contributions help us achieve our mission.</p>
+					<a href="fundraisers.html" class="card-link">See fundraisers →</a>
+				</div>
+				<div class="page-card">
+					<h3><a href="events.html">Events →</a></h3>
+					<p>Stay updated on our upcoming events, workshops, and networking opportunities. Join us for professional development sessions and community building activities.</p>
+					<a href="events.html" class="card-link">See events →</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Slide-over Navigation Menu -->
+	<div class="slide-over-menu" id="slide-over-menu">
+		<div class="slide-over-content">
+			<div class="slide-over-header">
+				<h2>Navigation</h2>
+				<button class="close-menu" id="close-menu">&times;</button>
+			</div>
+			<nav class="slide-over-nav">
+				<a href="index.html">Home</a>
+				<a href="about.html" class="active">About</a>
+				<a href="members.html">Members</a>
+				<a href="pledge-education.html">Pledge Education</a>
+				<a href="fundraisers.html">Fundraisers</a>
+				<a href="events.html">Events</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</div>
+	</div>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>© <span id="year"></span> Eta Tau</span>
+			<div class="social">
+				<a href="https://instagram.com/weateatau" target="_blank">Instagram</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+		
+		// Slide-over menu functionality
+		const hamburgerMenu = document.getElementById('hamburger-menu');
+		const slideOverMenu = document.getElementById('slide-over-menu');
+		const closeMenu = document.getElementById('close-menu');
+		
+		hamburgerMenu.addEventListener('click', function() {
+			slideOverMenu.classList.add('active');
+		});
+		
+		closeMenu.addEventListener('click', function() {
+			slideOverMenu.classList.remove('active');
+		});
+		
+		// Close menu when clicking outside
+		slideOverMenu.addEventListener('click', function(e) {
+			if (e.target === slideOverMenu) {
+				slideOverMenu.classList.remove('active');
+			}
+		});
+		
+		// Scroll animations
+		const observerOptions = {
+			threshold: 0.1,
+			rootMargin: '0px 0px -50px 0px'
+		};
+		
+		const observer = new IntersectionObserver(function(entries) {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('animate-in');
+				}
+			});
+		}, observerOptions);
+		
+		// Observe elements for animation
+		document.addEventListener('DOMContentLoaded', function() {
+			const elementsToAnimate = document.querySelectorAll('.about-content, .goal-section, .page-card');
+			elementsToAnimate.forEach(el => {
+				el.classList.add('animate-on-scroll');
+				observer.observe(el);
+			});
+		});
+	</script>
+</body>
+</html>
+
+
