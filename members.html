@@ -470,59 +470,61 @@
 		}
 		
 		// Search functionality
-		const searchInput = document.getElementById('member-search');
-		const memberCards = document.querySelectorAll('.member-card');
-		
-		searchInput.addEventListener('input', function() {
-			const searchTerm = this.value.toLowerCase();
-			memberCards.forEach(card => {
-				const memberName = card.getAttribute('data-name');
-				const memberInfo = card.querySelector('.member-hover-info');
-				const major = memberInfo.querySelector('.member-major').textContent.toLowerCase();
-				const funFact = memberInfo.querySelector('.member-fun-fact').textContent.toLowerCase();
-				
-				if (memberName.includes(searchTerm) || major.includes(searchTerm) || funFact.includes(searchTerm)) {
-					card.style.display = 'block';
-					card.classList.add('search-match');
-				} else {
-					card.style.display = 'none';
-					card.classList.remove('search-match');
-				}
-			});
-		});
-		
-		// Filter functionality
-		const filterButtons = document.querySelectorAll('.filter-btn');
-		filterButtons.forEach(button => {
-			button.addEventListener('click', function() {
-				// Remove active class from all buttons
-				filterButtons.forEach(btn => btn.classList.remove('active'));
-				// Add active class to clicked button
-				this.classList.add('active');
-				
-				const filter = this.getAttribute('data-filter');
+		document.addEventListener('DOMContentLoaded', function() {
+			const searchInput = document.getElementById('member-search');
+			const memberCards = document.querySelectorAll('.member-card');
+			
+			searchInput.addEventListener('input', function() {
+				const searchTerm = this.value.toLowerCase();
 				memberCards.forEach(card => {
-					if (filter === 'all' || card.getAttribute('data-committee') === filter) {
+					const memberName = card.getAttribute('data-name');
+					const memberInfo = card.querySelector('.member-hover-info');
+					const major = memberInfo.querySelector('.member-major').textContent.toLowerCase();
+					const funFact = memberInfo.querySelector('.member-fun-fact').textContent.toLowerCase();
+					
+					if (memberName.includes(searchTerm) || major.includes(searchTerm) || funFact.includes(searchTerm)) {
 						card.style.display = 'block';
-						card.classList.add('filter-match');
+						card.classList.add('search-match');
 					} else {
 						card.style.display = 'none';
-						card.classList.remove('filter-match');
+						card.classList.remove('search-match');
 					}
 				});
 			});
-		});
-		
-		// Member card hover effects
-		memberCards.forEach(card => {
-			card.addEventListener('mouseenter', function() {
-				this.style.transform = 'translateY(-10px) scale(1.05)';
-				this.style.zIndex = '10';
+			
+			// Filter functionality
+			const filterButtons = document.querySelectorAll('.filter-btn');
+			filterButtons.forEach(button => {
+				button.addEventListener('click', function() {
+					// Remove active class from all buttons
+					filterButtons.forEach(btn => btn.classList.remove('active'));
+					// Add active class to clicked button
+					this.classList.add('active');
+					
+					const filter = this.getAttribute('data-filter');
+					memberCards.forEach(card => {
+						if (filter === 'all' || card.getAttribute('data-committee') === filter) {
+							card.style.display = 'block';
+							card.classList.add('filter-match');
+						} else {
+							card.style.display = 'none';
+							card.classList.remove('filter-match');
+						}
+					});
+				});
 			});
 			
-			card.addEventListener('mouseleave', function() {
-				this.style.transform = 'translateY(0) scale(1)';
-				this.style.zIndex = '1';
+			// Member card hover effects
+			memberCards.forEach(card => {
+				card.addEventListener('mouseenter', function() {
+					this.style.transform = 'translateY(-10px) scale(1.05)';
+					this.style.zIndex = '10';
+				});
+				
+				card.addEventListener('mouseleave', function() {
+					this.style.transform = 'translateY(0) scale(1)';
+					this.style.zIndex = '1';
+				});
 			});
 		});
 		
